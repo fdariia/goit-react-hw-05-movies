@@ -1,0 +1,16 @@
+.castImg {
+  width: 150px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.castItem:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.castName {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
