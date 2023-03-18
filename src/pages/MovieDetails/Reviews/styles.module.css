@@ -1,0 +1,14 @@
+.reviews {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.reviewsItem:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.reviewsAuthor {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
