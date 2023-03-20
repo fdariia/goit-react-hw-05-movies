@@ -18,6 +18,7 @@ const StyledNavLink = styled(NavLink)`
 
 const MovieDetails = () => {
   const [movie, setMovie] = useState(null);
+  const [passName, setPassName] = useState(null);
 
   const IMAGE__API = 'https://image.tmdb.org/t/p/w500';
 
@@ -29,17 +30,15 @@ const MovieDetails = () => {
       const movie = await fetchId(params.movieId);
       setMovie(movie);
     }
-
+setPassName(location.state?.from ?? '/')
     getMovieDetails();
   }, [params.movieId]);
-
-  const backLinkHref = location.state?.from ?? '/';
 
   return (
     <div className={css.movieDetails}>
       {movie && (
         <div>
-          <Link to={backLinkHref} state={{ from: location }}>
+          <Link to={passName}>
             <button className={css.button} type="button">
               Go back
             </button>
