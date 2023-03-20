@@ -26,7 +26,7 @@ const HomePage = () => {
           {movies.map(({ title, id }) => {
             return (
               <li className={css.homePageItem} key={id}>
-                <Link to={`movie/${id}`} state={{ from: location }}>
+                <Link to={`/movie/${id}`} state={{ from: location }}>
                   {title}
                 </Link>
               </li>
