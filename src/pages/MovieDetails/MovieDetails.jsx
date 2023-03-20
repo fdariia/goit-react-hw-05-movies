@@ -32,7 +32,7 @@ const MovieDetails = () => {
     }
 setPassName(location.state?.from ?? '/')
     getMovieDetails();
-  }, [params.movieId]);
+  }, [params.movieId, location.state?.from]);
 
   return (
     <div className={css.movieDetails}>
