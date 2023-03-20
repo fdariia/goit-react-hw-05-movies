@@ -32,7 +32,8 @@ const MovieDetails = () => {
     }
 setPassName(location.state?.from ?? '/')
     getMovieDetails();
-  }, [params.movieId, location.state?.from]);
+    // eslint-disable-next-line
+  }, [params.movieId]);
 
   return (
     <div className={css.movieDetails}>
