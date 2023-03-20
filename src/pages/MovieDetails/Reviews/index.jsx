@@ -4,7 +4,7 @@ import { fetchReviews } from '../../../api/movies-api';
 import css from './styles.module.css';
 
 const Reviews = () => {
-  const [reviews, setReviews] = useState([]);
+  const [reviews, setReviews] = useState(null);
   const params = useParams();
 
   useEffect(() => {
