@@ -39,7 +39,7 @@ const MovieDetails = () => {
     <div className={css.movieDetails}>
       {movie && (
         <div>
-          <Link to={backLinkHref}>
+          <Link to={backLinkHref} state={{ from: location }}>
             <button className={css.button} type="button">
               Go back
             </button>
