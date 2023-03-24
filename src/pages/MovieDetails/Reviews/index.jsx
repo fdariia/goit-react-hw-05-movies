@@ -5,12 +5,14 @@ import css from './styles.module.css';
 
 const Reviews = () => {
   const [reviews, setReviews] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
   const params = useParams();
 
   useEffect(() => {
     async function getReviews() {
       const reviews = await fetchReviews(params.movieId);
       setReviews(reviews.results);
+      setIsLoading(false);
     }
 
     getReviews();
@@ -30,7 +32,7 @@ const Reviews = () => {
           })}
         </ul>
       ) : (
-        <p>There are no reviews for this movie.</p>
+        !isLoading && <p>There are no reviews.</p>
       )}
     </div>
   );
